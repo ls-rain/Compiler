@@ -1,0 +1,46 @@
+	      INT   0, 68
+	      SUP   0, main
+	      RET   0, 0
+main:
+	      INT   0, 28
+	      LDA   1, 12
+	     LITI   0, 10
+	      STX   0, 1
+	      POP   0, 1
+	      LDA   1, 16
+	     LITI   0, 20
+	      STX   0, 1
+	      POP   0, 1
+	      LDA   1, 20
+	      LOD   1, 12
+	      LOD   1, 16
+	     ADDI   0, 0
+	      STX   0, 1
+	      POP   0, 1
+	      INT   0, 12
+	      LDA   0, 12
+	      LOD   1, 20
+	      POP   0, 5
+	     ADDR   0, printf
+	      CAL   0, 0
+	      LDA   1, 24
+	      LOD   0, 36
+	      LOD   0, 40
+	     DIVF   0, 0
+	      STX   0, 1
+	      POP   0, 1
+	      INT   0, 12
+	      LDA   0, 44
+	      LOD   1, 24
+	      POP   0, 5
+	     ADDR   0, printf
+	      CAL   0, 0
+	      LDA   1, -4
+	     LITI   0, 0
+	      STO   0, 1
+	      RET   0, 0
+	      RET   0, 0
+.literal    12  "value of c : %d \n"
+.literal    36  70.000000
+.literal    40  3.000000
+.literal    44  "value of f : %f \n"
